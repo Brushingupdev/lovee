@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Un rincón digital para tener nuestros recuerdos mi monita bella" />
+  <title>Para Mi Amor</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="preload" href="song/Camila — Todo Cambió [Letra].mp3" as="audio">
+</head>
+<body>
+  <canvas id="heartsCanvas" aria-hidden="true"></canvas>
+
+  <div class="container">
+    <header class="encabezado" role="banner">
+      <h1 class="titulo">Para Mi Amor, Mi Kary</h1>
+      <p class="subtitulo">Un pequeño rincón para recordarte cuánto te amo 💖</p>
+    </header>
+
+    <main class="contenido-principal" role="main">
+      <section class="mensaje-seccion" aria-labelledby="mensaje-titulo">
+        <h2 id="mensaje-titulo" class="visually-hidden">Mensaje de Amor</h2>
+        <p class="mensaje">
+          Mi amor, eres la luz de mi vida. Cada día contigo es como un sueño del que nunca quiero despertar. 
+          Este pequeño rincón digital es para celebrar nuestro amor, con recuerdos que giran como nuestro corazón.
+        </p>
+      </section>
+
+      <section class="escena-seccion" aria-labelledby="recuerdos-titulo">
+        <h2 id="recuerdos-titulo" class="visually-hidden">Recuerdos Especiales</h2>
+        <div class="escena">
+          <div class="cubo-grande" role="button" tabindex="0" aria-label="Pausar o reanudar cubo de recuerdos grandes">
+            <div class="cara cara1"><img loading="lazy" src="img/foto1.webp" alt="Recuerdo 1: Nuestra primera cita"></div>
+            <div class="cara cara2"><img loading="lazy" src="img/foto2.webp" alt="Recuerdo 2: Atardecer en la playa"></div>
+            <div class="cara cara3"><img loading="lazy" src="img/foto3.webp" alt="Recuerdo 3: Viaje a las montañas"></div>
+            <div class="cara cara4"><img loading="lazy" src="img/foto4.webp" alt="Recuerdo 4: Noche de estrellas"></div>
+            <div class="cara cara5"><img loading="lazy" src="img/foto5.webp" alt="Recuerdo 5: Cumpleaños juntos"></div>
+            <div class="cara cara6"><img loading="lazy" src="img/foto6.webp" alt="Recuerdo 6: Día de picnic"></div>
+
+            <div class="cubo-pequeno" aria-hidden="true">
+              <div class="cara mini mini1"><img loading="lazy" src="img/foto7.webp" alt="Mini Recuerdo 1"></div>
+              <div class="cara mini mini2"><img loading="lazy" src="img/foto8.webp" alt="Mini Recuerdo 2"></div>
+              <div class="cara mini mini3"><img loading="lazy" src="img/foto9.webp" alt="Mini Recuerdo 3"></div>
+              <div class="cara mini mini4"><img loading="lazy" src="img/foto10.webp" alt="Mini Recuerdo 4"></div>
+              <div class="cara mini mini5"><img loading="lazy" src="img/foto3.webp" alt="Mini Recuerdo 5"></div>
+              <div class="cara mini mini6"><img loading="lazy" src="img/foto4.webp" alt="Mini Recuerdo 6"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie" role="contentinfo">
+      <p class="frase">Contigo cada momento se convierte en un recuerdo eterno. 💞</p>
+    </footer>
+  </div>
+
+  <div class="audio-control" role="region" aria-label="Controles de audio">
+    <button id="toggleAudio" aria-label="Reproducir o pausar música">🎵</button>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.4" aria-label="Ajustar volumen">
+  </div>
+
+  <audio id="player" src="song/Camila — Todo Cambió [Letra].mp3" preload="auto" loop></audio>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-label="Visor de imágenes" tabindex="-1">
+    <button class="close-lightbox" aria-label="Cerrar visor de imágenes">&times;</button>
+    <img id="lightbox-img" src="" alt="Recuerdo ampliado">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
